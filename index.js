@@ -49,13 +49,13 @@ app.get('/api/data/table', (req, res) => {
             </tr>
         </thead>
         <tbody>
-            ${data.map(data =>
+            ${data.map(data =>`
                 <tr>
                     <td>${data.Id}</td>
                     <td>${data.Name}</td>
                     <td>${data.Character}</td>
                 </tr>
-                ).join('')}
+                `).join('')}
         </tbody>
     </table>`;
     res.send(tableHtml);
